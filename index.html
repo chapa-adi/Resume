@@ -1,37 +1,161 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>ADITI'S PERSONAL SITE</title>
-    </head>
-    <body>
-        <img src="images/photo.png" alt="Aditi" width="200" height="200">
-        <h1>Aditi Chapagain</h1>
-        <p> <em> <strong> USF Freshman</strong></em> for Fall 2024</p>
-        <p>
-            I graduated from <strong> Kathmandu Model Secondary School </strong> in Bagbazar, Kathmandu, with a Higher Education in Science Faculty. <br>
-            My relevant coursework during high school includes Computer Science, Mathematics, Physics, Chemistry, Compulsory English, and Compulsory Nepali.
-        </p>
-        <hr>
-        <h3> Education</h3>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aditi Chapagain — Portfolio</title>
+  <meta name="description" content="Portfolio of Aditi Chapagain — CS @ USF. Projects, education, leadership, and tech stack." />
+
+
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Aditi Chapagain — Portfolio" />
+  <meta property="og:description" content="Projects, education, leadership, and tech stack." />
+  <meta property="og:image" content="images/og-preview.png" />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="nav">
+      <a class="brand" href="#top">Aditi Chapagain</a>
+
+      <!-- mobile menu button -->
+      <button id="menu" class="menu" aria-label="Toggle navigation">☰</button>
+
+      <!-- nav links -->
+      <ul id="links" class="links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#skills">Tech Stack</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Optional hero -->
+  <section class="hero">
+    <h1>Hi, I’m Aditi 👋</h1>
+    <p>CS @ USF • Building practical tools with Python/FastAPI & SQLite.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#projects">See Projects</a>
+      <a class="btn secondary" href="#education">My Education</a>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+
+    <div class="cards">
+      <!-- Project 1 -->
+      <article class="card">
+        <h3>Library Management System</h3>
+        <p>FastAPI • SQLModel • SQLite • RESTful API</p>
         <ul>
-            <li> <strong> <a href="https://gems.edu.np/">Gems School</a></strong> (Grade 9/10)</li>
-            <li><strong> <a href="https://ktmmodelcollege.edu.np/"> Kathmandu Model Secondary School</a></strong> (Grade 11/12)</li>
-            <ul style="list-style-type:none">
-                <li> <strong> GPA:</strong> 3.81</li>
-            </ul>
+          <li>Designed and implemented a REST API for books, authors, users, and borrow records.</li>
+          <li>JWT auth + Role-based access control (Admin, Librarian, Member).</li>
+          <li>Full CRUD with relational models & dependencies.</li>
         </ul>
-        <hr>
-        <h3>Experiences</h3>
-        <ol>
-            <li><a href="donation.html">First Blood Donation Campaign in KMSS</a></li>
-            <li> <a href="leo.html">Vice-President - Leo Club of Kathmandu Pashupatinath</a></li>
-            <li>Volunteer - Kathmandu Youth Conclave 2023</li>
-            <li>Bronze Award Recipient - Duke of Edinburgh's International Award</li>
-        </ol>
-        <hr>
-        <h3> Contact Info:</h3>
-        aditichapagain@usf.edu
-        <hr>
-    </body>
+        <div class="actions">
+          <a href="https://github.com/chapa-adi/Lib_Management_system" target="_blank" rel="noreferrer">View Code</a>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="card">
+        <h3>Line Following Robot Car — Software Lead</h3>
+        <p>Arduino • C++</p>
+        <ul>
+          <li>Programmed motor & sensor logic for autonomous line tracking.</li>
+          <li>Led the design presentation and live technical demo.</li>
+          <li>Optimized control for precise navigation and stability.</li>
+        </ul>
+        <div class="actions">
+          <a href="https://www.youtube.com/watch?v=wMWOYSQwDSQ" target="_blank" rel="noreferrer">See the Robot</a>
+        </div>
+      </article>
+<!-- Project 3 -->
+<article class="card">
+  <h3>Task Tracker CLI</h3>
+  <p>Python • JSON </p>
+  <ul>
+    <li>Add, list, update, mark-done, and delete tasks stored in a JSON file.</li>
+    <li>Auto-incrementing IDs, ISO timestamps, and safe file I/O with error handling.</li>
+    <li>Lightweight module structure</li>
+  </ul>
+  <div class="actions">
+    <a href="https://github.com/chapa-adi/TasK-Tracker.git" target="_blank" rel="noreferrer">View Code</a>
+  </div>
+</article>
+</section>
+  <!-- Education -->
+  <section id="education" class="section">
+    <h2>Education</h2>
+
+    <div class="card">
+      <h3>University of South Florida — Tampa, FL</h3>
+      <p><strong>B.S. in Computer Science</strong>, Minor in Mathematics</p>
+      <p><em>Expected Graduation — May 2027</em></p>
+    </div>
+
+    <div class="card">
+      <h3>Kathmandu Model Secondary School— [Kathmandu, Nepal]</h3>
+      <p><strong>High School Diploma</strong></p>
+      <p><em>Graduated — Sep 2023</em></p>
+    </div>
+  </section>
+
+  <!-- Leadership -->
+  <section id="leadership" class="section">
+    <h2>Leadership & Involvement</h2>
+
+    <div class="card">
+      <h3>Director of Public Relations — Nepalese Student Association @ USF</h3>
+      <p><em>May 2025 – Present</em></p>
+      <ul>
+        <li>Managed communications & outreach to keep students informed and engaged.</li>
+        <li>Promoted cultural events that increased participation and community connections.</li>
+      </ul>
+
+    </div>
+
+    <div class="card">
+      <h3>Vice-President & Founding Member — Leo Club of Kathmandu Pashupatinath</h3>
+      <p><em>Sep 2023 – Sep 2024</em></p>
+      <ul>
+        <li>Organized weekly blood donation drives (30+ pints average) and diabetic health camps.</li>
+        <li>Led volunteer events promoting youth leadership and social impact.</li>
+      </ul>
+      <div class="actions">
+        <a href="./leo.html" target="_blank" rel="noreferrer">See Images</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack -->
+  <section id="skills" class="section">
+    <h2>Tech Stack</h2>
+    <ul>
+      <li><strong>Languages:</strong> Python, C, SQL, HTML/CSS</li>
+      <li><strong>Frameworks:</strong> FastAPI, Flask, React, SQLModel, SQLite</li>
+      <li><strong>Developer Tools:</strong> Git, GitHub, VS Code, WinSCP, PuTTY, Virtual Environments</li>
+      <li><strong>Concepts & Technologies:</strong> RESTful API Design, Database Management, CRUD, JSON Handling, Role-Based Access Control</li>
+    </ul>
+  </section>
+
+  <footer class="site-footer">
+    <p>Aditi Chapagain • <a href="https://github.com/chapa-adi" target="_blank" rel="noreferrer">GitHub</a></p>
+  </footer>
+
+  <script>
+    // mobile menu toggle
+    const menu = document.getElementById('menu');
+    const links = document.getElementById('links');
+    menu.addEventListener('click', () => links.classList.toggle('open'));
+
+    // dynamic year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>

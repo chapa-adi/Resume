@@ -1,0 +1,59 @@
+:root { --bg:#0b0b0f; --card:#14141a; --text:#e8e8ee; --muted:#b6b6c2; --acc:#6ee7ff; }
+
+/* base */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif}
+a{color:var(--acc);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* header/nav */
+.site-header{position:sticky;top:0;background:rgba(11,11,15,.6);backdrop-filter:blur(8px);border-bottom:1px solid #202028}
+.nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 16px}
+.brand{font-weight:700}
+.menu{display:none;background:none;border:1px solid #2a2a34;border-radius:10px;color:var(--text);font-size:20px;padding:4px 10px}
+.links{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+.links a{padding:6px 8px;border-radius:8px}
+.links a:hover{background:#1b1b25}
+
+/* hero */
+.hero{max-width:1100px;margin:48px auto;padding:0 16px;text-align:center}
+.hero h1{font-size:40px;margin:0 0 8px}
+.hero p{color:var(--muted);margin:0 0 18px}
+.hero .btn{display:inline-block;margin:4px 6px;padding:10px 16px;border-radius:12px;background:var(--acc);color:#001018;font-weight:700}
+.hero .btn.secondary{background:#232332;color:var(--text)}
+
+/* sections */
+.section{max-width:1100px;margin:60px auto;padding:0 16px}
+.section + .section{margin-top:100px;} /* extra space between major sections */
+
+/* cards */
+.cards{display:grid;gap:16px}
+.card{background:var(--card);border:1px solid #232332;border-radius:16px;padding:16px}
+.card h3{margin:0 0 8px}
+.card p{color:var(--muted)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.tags span{background:#1f1f29;border:1px solid #2b2b38;border-radius:999px;padding:4px 10px;font-size:12px}
+.actions a{display:inline-block;margin-right:10px}
+
+/* layout rules per section */
+/* Projects: responsive grid (2 columns on desktop, 1 on small screens) */
+#projects .cards{
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+}
+
+/* Education: always one per line */
+#education .cards{ grid-template-columns: 1fr; }
+#education .card + .card{ margin-top:16px; } /* space between the two edu cards */
+
+/* misc */
+.bullets{color:var(--muted)}
+.site-footer{max-width:1100px;margin:48px auto 24px;padding:0 16px;color:#8d8da0;text-align:center;border-top:1px solid #202028;padding-top:16px}
+
+/* responsive nav + small screens */
+@media (max-width:760px){
+  .menu{display:inline-block}
+  .links{display:none;flex-direction:column;gap:10px;background:#0f0f16;border:1px solid #242434;position:absolute;right:16px;top:56px;padding:10px 12px;border-radius:12px}
+  .links.open{display:flex}
+  .hero h1{font-size:34px}
+  /* Projects become 1 column automatically due to auto-fit rule */
+}
